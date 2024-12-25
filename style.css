@@ -175,3 +175,51 @@
 .accorddion-container{
   margin: 0 auto;
 }
+/* Accordion konteyner */
+.accordion-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(583px, 1fr)); /* Yonma-yon 2 ta */
+  gap: 20px; /* Elementlar oralig‘i */
+  max-width: 1200px;
+  margin: 50px auto; /* Markazga joylash */
+}
+
+/* Accordion elementi */
+.accordion-block {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.accordion-title {
+  background-color: #f7f7f7;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  padding: 0 15px;
+  background-color: #ffffff;
+}
+
+.accordion-body p {
+  margin: 15px 0;
+}
+
+/* Aktiv accordion */
+.accordion-block.is-active .accordion-body {
+  max-height: 150px; /* Kontent balandligi */
+}
+
+.accordion-block.is-active .accordion-title {
+  background-color: #e0e0e0;
+}
